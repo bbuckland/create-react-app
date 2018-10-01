@@ -53,11 +53,15 @@ module.exports = (resolve, rootDir, isEjecting) => {
   const overrides = Object.assign({}, require(paths.appPackageJson).jest);
   const supportedKeys = [
     'collectCoverageFrom',
+    'coveragePathIgnorePatterns',
     'coverageReporters',
     'coverageThreshold',
     'resetMocks',
     'resetModules',
     'snapshotSerializers',
+    'testEnvironment',
+    'testURL',
+    'timers',
     'watchPathIgnorePatterns',
   ];
   if (overrides) {
